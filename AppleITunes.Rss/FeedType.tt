@@ -1,0 +1,78 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)Generator\$(OutDir)Generator.dll" #>
+<#@ import namespace="Generator" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+<#
+    var mediaTypesTask = Generator.Data.MediaType.GetAsync();
+    var langMediaTypesTask = Generator.Data.Lang.MediaType.GetAsync();
+
+	Task.WaitAll(mediaTypesTask, langMediaTypesTask);
+    var feedTypes = from feedType in mediaTypesTask.Result.SelectMany(x => x.FeedTypes)
+					 join langMediaType in langMediaTypesTask.Result
+					 on feedType.TranslationKey equals langMediaType.Key
+					 select new {
+					 			    Name = langMediaType.Value.ToPascalCase(),
+									DisplayText = langMediaType.Value,
+									UrlPattern = feedType.UrlPrefix + "/" + feedType.UrlSuffix
+					 		    };
+	var feedTypeGenres = from mediaType in mediaTypesTask.Result
+	                     select new {
+							FeedTypes = from feedType in mediaType.FeedTypes
+										join langMediaType in langMediaTypesTask.Result
+										on feedType.TranslationKey equals langMediaType.Key
+										select langMediaType.Value.ToPascalCase(),
+							Genres = from genre in mediaType.SubGenres
+	                                    join langMediaType in langMediaTypesTask.Result
+										on genre.TranslationKey equals langMediaType.Key
+										select new {
+											Name = langMediaType.Value.ToPascalCase(),
+											Id = genre.Id
+										}
+						 };
+#>
+using System;
+using System.ComponentModel;
+using System.Linq;
+
+namespace AppleITunes {
+	public enum FeedType {
+<# foreach (var feedType in feedTypes) { #>
+		[Description("<#=feedType.DisplayText#>")]
+        <#=feedType.Name#>,
+<# } #>
+	}
+
+	internal static class FeedTypeExtensions {
+		public static String GetUrlPattern(this FeedType feedType) {
+			switch (feedType) {
+<# foreach (var feedType in feedTypes) { #>
+				case FeedType.<#=feedType.Name#>:
+					return @"<#=feedType.UrlPattern#>";
+<# } #>
+			}
+			throw new NotImplementedException();
+		}
+		public static String GetGenreId(this FeedType feedType, Genre genre) {
+			var feedTypeGenres = new [] {
+<# foreach (var feedTypeGenre in feedTypeGenres) { #>
+				new {
+					FeedTypes = new FeedType [] {
+<# foreach (var feedType in feedTypeGenre.FeedTypes) { #>
+						FeedType.<#=feedType#>,
+<# } #>
+					},
+					Genres = new [] {
+<# foreach (var genre in feedTypeGenre.Genres) { #>
+						new { Genre = Genre.<#=genre.Name#>, Id = @"<#=genre.Id#>" },
+<# } #>
+					}
+				},
+<# } #>
+			};
+			return feedTypeGenres.Single(x => x.FeedTypes.Contains(feedType)).Genres.Single(x => x.Genre == genre).Id;
+		}
+	}
+}

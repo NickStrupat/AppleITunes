@@ -1,0 +1,31 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)Generator\$(OutDir)Generator.dll" #>
+<#@ import namespace="Generator" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+<#
+    var mediaTypesTask = Generator.Data.MediaType.GetAsync();
+    var langMediaTypesTask = Generator.Data.Lang.MediaType.GetAsync();
+
+	Task.WaitAll(mediaTypesTask, langMediaTypesTask);
+    var allGenres = from genre in mediaTypesTask.Result.SelectMany(x => x.SubGenres)
+				    join langMediaType in langMediaTypesTask.Result
+				    on genre.TranslationKey equals langMediaType.Key
+				    select new {
+						Name = langMediaType.Value.ToPascalCase(),
+						DisplayText = langMediaType.Value
+				    };
+    var genres = allGenres.Distinct().OrderBy(x => x.Name);
+#>
+using System.ComponentModel;
+
+namespace AppleITunes {
+	public enum Genre {
+<# foreach (var genre in genres) { #>
+		[Description("<#=genre.DisplayText#>")]
+        <#=genre.Name#>,
+<# } #>
+	}
+}

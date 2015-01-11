@@ -1,0 +1,30 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)Generator\$(OutDir)Generator.dll" #>
+<#@ import namespace="Generator" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+<#
+    var mediaTypesTask = Generator.Data.MediaType.GetAsync();
+    var langMediaTypesTask = Generator.Data.Lang.MediaType.GetAsync();
+
+	Task.WaitAll(mediaTypesTask, langMediaTypesTask);
+    var mediaTypes = from mediaType in mediaTypesTask.Result
+					 join langMediaType in langMediaTypesTask.Result
+					 on mediaType.TranslationKey equals langMediaType.Key
+					 select new {
+					 			    Name = langMediaType.Value.ToPascalCase(),
+									DisplayText = langMediaType.Value
+					 		    };
+#>
+using System.ComponentModel;
+
+namespace AppleITunes {
+	public enum MediaType {
+<# foreach (var mediaType in mediaTypes) { #>
+		[Description("<#=mediaType.DisplayText#>")]
+        <#=mediaType.Name#>,
+<# } #>
+	}
+}

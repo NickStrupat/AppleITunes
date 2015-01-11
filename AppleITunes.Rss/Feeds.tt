@@ -1,0 +1,57 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)Generator\$(OutDir)Generator.dll" #>
+<#@ assembly name="$(TargetPath)" #>
+<#@ import namespace="Generator" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="AppleITunes" #>
+<#@ output extension=".cs" #>
+<#
+    var countriesTask = Generator.Data.Country.GetAsync();
+    var mediaTypesTask = Generator.Data.MediaType.GetAsync();
+    var langCommonTask = Generator.Data.Lang.Common.GetAsync();
+    var langMediaTypesTask = Generator.Data.Lang.MediaType.GetAsync();
+    Task.WaitAll(countriesTask, mediaTypesTask, langCommonTask, langMediaTypesTask);
+    var countries = countriesTask.Result;
+    var mediaTypes = mediaTypesTask.Result;
+    var langCommon = langCommonTask.Result;
+    var langMediaTypes = langMediaTypesTask.Result;
+
+	Task.WaitAll(mediaTypesTask, langMediaTypesTask);
+    var feeds = from country in countries
+                join feedCountry in langCommon.FeedCountries
+                    on country.CountryCode equals feedCountry.Key
+                from store in country.Stores.Where(x => x.Value).Select(x => x.Key)
+                from mediaType in mediaTypes.Where(x => x.Store == store)
+                join mediaTypeLangMediaType in langMediaTypes
+                    on mediaType.TranslationKey equals mediaTypeLangMediaType.Key
+                from feedType in mediaType.FeedTypes
+                join feedTypeLangMediaType in langMediaTypes
+                    on feedType.TranslationKey equals feedTypeLangMediaType.Key
+                from genre in mediaType.SubGenres
+                join genreLangMediaType in langMediaTypes
+                    on genre.TranslationKey equals genreLangMediaType.Key
+                from explicitContent in new[] {false, true}
+                //let parameters = String.Format("limit={0}{1}/explicit={2}", 300, String.IsNullOrWhiteSpace(genre.Id) ? "/genre=" + genre.Id : String.Empty, explicitContent.ToString().ToLower())
+                select new Tuple<String, String, String, String, String/*, String*/>(
+                    feedCountry.Value.ToPascalCase(),
+                    mediaTypeLangMediaType.Value.ToPascalCase(),
+                    feedTypeLangMediaType.Value.ToPascalCase(),
+                    genreLangMediaType.Value.ToPascalCase(),
+                    explicitContent.ToString().ToLower()/*,
+                    feedType.UrlPrefix.Replace("<%= country_code %>", country.CountryCode).Replace("<%= parameters %>", parameters) + "/" + feedType.UrlSuffix*/
+                    );
+#>
+using System.Collections.Generic;
+
+namespace AppleITunes {
+	public static partial class Rss {
+		//public static readonly Feed[] Feeds = new [] {
+<# foreach (var feed in feeds.Take(0)) { #>
+			//new Feed(Country.<#=feed.Item1#>, MediaType.<#=feed.Item2#>, FeedType.<#=feed.Item3#>, Genre.<#=feed.Item4#>, <#=feed.Item5#>),
+<# } #>
+		//};
+	}
+}

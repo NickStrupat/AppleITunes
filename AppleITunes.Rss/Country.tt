@@ -1,0 +1,45 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)Generator\$(OutDir)Generator.dll" #>
+<#@ import namespace="Generator" #>
+<#@ import namespace="Generator.Data" #>
+<#@ import namespace="Generator.Data.Lang" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs" #>
+<#
+	var countriesTask = Country.GetAsync();
+	var langCommonTask = Common.GetAsync();
+	Task.WaitAll(countriesTask, langCommonTask);
+    var countries = from country in countriesTask.Result
+					join feedCountry in langCommonTask.Result.FeedCountries
+					on country.CountryCode equals feedCountry.Key
+					select new {
+								   Name = feedCountry.Value.ToPascalCase(),
+								   DisplayText = feedCountry.Value,
+								   Code = country.CountryCode
+							   };
+#>
+using System;
+using System.ComponentModel;
+
+namespace AppleITunes {
+	public enum Country {
+<# foreach (var country in countries) { #>
+		[Description("<#=country.DisplayText#>")]
+        <#=country.Name#>,
+<# } #>
+	}
+
+	internal static class CountryExtensions {
+		public static String GetCode(this Country country) {
+			switch (country) {
+<# foreach (var country in countries) { #>
+				case Country.<#=country.Name#>:
+					return @"<#=country.Code#>";
+<# } #>
+			}
+			throw new NotImplementedException();
+		}
+	}
+}
