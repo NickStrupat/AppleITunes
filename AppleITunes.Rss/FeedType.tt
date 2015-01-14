@@ -38,41 +38,43 @@ using System.ComponentModel;
 using System.Linq;
 
 namespace AppleITunes {
-	public enum FeedType {
+	public static partial class Rss {
+		public enum FeedType {
 <# foreach (var feedType in feedTypes) { #>
-		[Description("<#=feedType.DisplayText#>")]
-        <#=feedType.Name#>,
+			[Description("<#=feedType.DisplayText#>")]
+			<#=feedType.Name#>,
 <# } #>
-	}
-
-	internal static class FeedTypeExtensions {
-		public static String GetUrlPattern(this FeedType feedType) {
-			switch (feedType) {
-<# foreach (var feedType in feedTypes) { #>
-				case FeedType.<#=feedType.Name#>:
-					return @"<#=feedType.UrlPattern#>";
-<# } #>
-			}
-			throw new NotImplementedException();
 		}
-		public static String GetGenreId(this FeedType feedType, Genre genre) {
-			var feedTypeGenres = new [] {
+
+		internal static class FeedTypeExtensions {
+			public static String GetUrlPattern(this FeedType feedType) {
+				switch (feedType) {
+<# foreach (var feedType in feedTypes) { #>
+					case FeedType.<#=feedType.Name#>:
+						return @"<#=feedType.UrlPattern#>";
+<# } #>
+				}
+				throw new NotImplementedException();
+			}
+			public static String GetGenreId(this FeedType feedType, Genre genre) {
+				var feedTypeGenres = new [] {
 <# foreach (var feedTypeGenre in feedTypeGenres) { #>
-				new {
-					FeedTypes = new FeedType [] {
+					new {
+						FeedTypes = new FeedType [] {
 <# foreach (var feedType in feedTypeGenre.FeedTypes) { #>
-						FeedType.<#=feedType#>,
+							FeedType.<#=feedType#>,
 <# } #>
-					},
-					Genres = new [] {
+						},
+						Genres = new [] {
 <# foreach (var genre in feedTypeGenre.Genres) { #>
-						new { Genre = Genre.<#=genre.Name#>, Id = @"<#=genre.Id#>" },
+							new { Genre = Genre.<#=genre.Name#>, Id = @"<#=genre.Id#>" },
 <# } #>
-					}
-				},
+						}
+					},
 <# } #>
-			};
-			return feedTypeGenres.Single(x => x.FeedTypes.Contains(feedType)).Genres.Single(x => x.Genre == genre).Id;
+				};
+				return feedTypeGenres.Single(x => x.FeedTypes.Contains(feedType)).Genres.Single(x => x.Genre == genre).Id;
+			}
 		}
 	}
 }

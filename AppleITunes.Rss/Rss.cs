@@ -85,17 +85,17 @@ namespace AppleITunes {
     }
 
     internal class FeedQueryModelVisitor : QueryModelVisitorBase {
-        internal readonly ICollection<Country> countries = new List<Country>();//EnumHelper.GetValues<Country>();
-        internal readonly ICollection<MediaType> mediaTypes = new List<MediaType>();//EnumHelper.GetValues<MediaType>();
-        internal readonly ICollection<FeedType> feedTypes = new List<FeedType>();//EnumHelper.GetValues<FeedType>();
-        internal readonly ICollection<Genre> genres = new List<Genre>();//EnumHelper.GetValues<Genre>();
+        internal readonly ICollection<Rss.Country> countries = new List<Rss.Country>();//EnumHelper.GetValues<Country>();
+        internal readonly ICollection<Rss.MediaType> mediaTypes = new List<Rss.MediaType>();//EnumHelper.GetValues<MediaType>();
+        internal readonly ICollection<Rss.FeedType> feedTypes = new List<Rss.FeedType>();//EnumHelper.GetValues<FeedType>();
+        internal readonly ICollection<Rss.Genre> genres = new List<Rss.Genre>();//EnumHelper.GetValues<Genre>();
         internal readonly ICollection<Boolean> explicitContents = new[] { true, false };
 
         public IEnumerable<Rss.Feed> GetFeeds() {
-            return from country in countries.Any() ? countries : EnumHelper.GetValues<Country>()
-                   from mediaType in mediaTypes.Any() ? mediaTypes : EnumHelper.GetValues<MediaType>()
-                   from feedType in feedTypes.Any() ? feedTypes : EnumHelper.GetValues<FeedType>()
-                   from genre in genres.Any() ? genres : EnumHelper.GetValues<Genre>()
+            return from country in countries.Any() ? countries : EnumHelper.GetValues<Rss.Country>()
+                   from mediaType in mediaTypes.Any() ? mediaTypes : EnumHelper.GetValues<Rss.MediaType>()
+                   from feedType in feedTypes.Any() ? feedTypes : EnumHelper.GetValues<Rss.FeedType>()
+                   from genre in genres.Any() ? genres : EnumHelper.GetValues<Rss.Genre>()
                    from explicitContent in explicitContents
                    select new Rss.Feed(country, mediaType, feedType, genre, explicitContent);
         } 
@@ -104,7 +104,7 @@ namespace AppleITunes {
             base.VisitMainFromClause(fromClause, queryModel);
             //queryModel.MainFromClause
         }
-        private Func<Country, MediaType, FeedType, Genre, Boolean, Boolean> filter; 
+        private Func<Rss.Country, Rss.MediaType, Rss.FeedType, Rss.Genre, Boolean, Boolean> filter; 
         public override void VisitWhereClause(WhereClause whereClause, QueryModel queryModel, Int32 index) {
             base.VisitWhereClause(whereClause, queryModel, index);
             //var expressionParameters = new[] {
@@ -152,14 +152,14 @@ namespace AppleITunes {
             if (constant != null && constant.Type == typeof(Int32)) {
                 value = (Int32) constant.Value;
             }
-            if (type == typeof(Country))
-                feedQueryModelVisitor.countries.Add((Country)value);
-            else if (type == typeof(MediaType))
-                feedQueryModelVisitor.mediaTypes.Add((MediaType)value);
-            else if (type == typeof(FeedType))
-                feedQueryModelVisitor.feedTypes.Add((FeedType)value);
-            else if (type == typeof(Genre))
-                feedQueryModelVisitor.genres.Add((Genre)value);
+            if (type == typeof(Rss.Country))
+                feedQueryModelVisitor.countries.Add((Rss.Country)value);
+            else if (type == typeof(Rss.MediaType))
+                feedQueryModelVisitor.mediaTypes.Add((Rss.MediaType)value);
+            else if (type == typeof(Rss.FeedType))
+                feedQueryModelVisitor.feedTypes.Add((Rss.FeedType)value);
+            else if (type == typeof(Rss.Genre))
+                feedQueryModelVisitor.genres.Add((Rss.Genre)value);
             VisitExpression(expression.Left);
             VisitExpression(expression.Right);
             return /*base.VisitBinaryExpression*/(expression);

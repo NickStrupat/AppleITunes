@@ -22,10 +22,12 @@
 using System.ComponentModel;
 
 namespace AppleITunes {
-	public enum Genre {
+	public static partial class Rss {
+		public enum Genre {
 <# foreach (var genre in genres) { #>
-		[Description("<#=genre.DisplayText#>")]
-        <#=genre.Name#>,
+			[Description("<#=genre.DisplayText#>")]
+			<#=genre.Name#>,
 <# } #>
+		}
 	}
 }

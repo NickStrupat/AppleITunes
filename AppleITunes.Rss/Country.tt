@@ -24,22 +24,24 @@ using System;
 using System.ComponentModel;
 
 namespace AppleITunes {
-	public enum Country {
+	public static partial class Rss {
+		public enum Country {
 <# foreach (var country in countries) { #>
-		[Description("<#=country.DisplayText#>")]
-        <#=country.Name#>,
+			[Description("<#=country.DisplayText#>")]
+			<#=country.Name#>,
 <# } #>
-	}
+		}
 
-	internal static class CountryExtensions {
-		public static String GetCode(this Country country) {
-			switch (country) {
+		internal static class CountryExtensions {
+			public static String GetCode(this Country country) {
+				switch (country) {
 <# foreach (var country in countries) { #>
-				case Country.<#=country.Name#>:
-					return @"<#=country.Code#>";
+					case Country.<#=country.Name#>:
+						return @"<#=country.Code#>";
 <# } #>
+				}
+				throw new NotImplementedException();
 			}
-			throw new NotImplementedException();
 		}
 	}
 }

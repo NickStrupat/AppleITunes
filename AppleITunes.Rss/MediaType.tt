@@ -21,10 +21,12 @@
 using System.ComponentModel;
 
 namespace AppleITunes {
-	public enum MediaType {
+	public static partial class Rss {
+		public enum MediaType {
 <# foreach (var mediaType in mediaTypes) { #>
-		[Description("<#=mediaType.DisplayText#>")]
-        <#=mediaType.Name#>,
+			[Description("<#=mediaType.DisplayText#>")]
+			<#=mediaType.Name#>,
 <# } #>
+		}
 	}
 }
