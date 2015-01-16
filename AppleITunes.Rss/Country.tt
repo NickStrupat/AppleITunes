@@ -31,17 +31,17 @@ namespace AppleITunes {
 			<#=country.Name#>,
 <# } #>
 		}
+	}
 
-		internal static class CountryExtensions {
-			public static String GetCode(this Country country) {
-				switch (country) {
+	internal static class CountryExtensions {
+		public static String GetCode(this Rss.Country country) {
+			switch (country) {
 <# foreach (var country in countries) { #>
-					case Country.<#=country.Name#>:
-						return @"<#=country.Code#>";
+				case Rss.Country.<#=country.Name#>:
+					return @"<#=country.Code#>";
 <# } #>
-				}
-				throw new NotImplementedException();
 			}
+			throw new NotImplementedException();
 		}
 	}
 }

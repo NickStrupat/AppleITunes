@@ -53,12 +53,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AppleITunes.Rss\AppleITunes.Rss.csproj">
-      <Project>{6e4e0bf6-9eaf-43c9-81a1-344d0e270f1f}</Project>
-      <Name>AppleITunes.Rss</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

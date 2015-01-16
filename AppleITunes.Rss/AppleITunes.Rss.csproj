@@ -52,11 +52,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Country.tt</DependentUpon>
     </Compile>
-    <Compile Include="Feeds.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Feeds.tt</DependentUpon>
-    </Compile>
     <Compile Include="FeedType.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,10 +75,6 @@
     <None Include="Country.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Country.cs</LastGenOutput>
-    </None>
-    <None Include="Feeds.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Feeds.cs</LastGenOutput>
     </None>
     <None Include="FeedType.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

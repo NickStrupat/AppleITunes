@@ -21,13 +21,13 @@ namespace ConsoleApplication1 {
             //return;
             //AppleITunesRss.Canada.Music.NewReleases.All
             //var count = Rss.Feeds.Count();
-            var countries = EnumHelper.GetValues<Country>();
+            var countries = EnumHelper.GetValues<Rss.Country>();
             var newReleases = from feed in AppleITunes.Rss.Feeds
-                              where feed.Country == Country.Canada || feed.Country == Country.UnitedStates
-                              where feed.MediaType == MediaType.Music
+                              where feed.Country == Rss.Country.Canada || feed.Country == Rss.Country.UnitedStates
+                              where feed.MediaType == Rss.MediaType.Music
                               //where feed.Genre == Genre.Blues
-							  where feed.FeedType == FeedType.NewReleases
-                                 && new[] { Genre.Blues, Genre.Classic }.Contains(feed.Genre)
+							  where feed.FeedType == Rss.FeedType.NewReleases
+                                 && new[] { Rss.Genre.Blues, Rss.Genre.Classic }.Contains(feed.Genre)
                               select feed;
             var what = newReleases.ToArray();
             var asdf = what.First().Content;

@@ -40,7 +40,7 @@ namespace AppleITunes
 		)
 		{ }
 
-	    public GetResults() {
+	    public void GetResults() {
 		    
 	    }
     }

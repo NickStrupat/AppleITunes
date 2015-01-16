@@ -21,7 +21,7 @@ namespace AppleITunes {
 			[Description("Argentina")]
 			Argentina,
 			[Description("Argentina (English)")]
-			Argentina(english),
+			ArgentinaEnglish,
 			[Description("Armenia")]
 			Armenia,
 			[Description("Australia")]
@@ -39,13 +39,13 @@ namespace AppleITunes {
 			[Description("Belgium")]
 			Belgium,
 			[Description("Belgium (English)")]
-			Belgium(english),
+			BelgiumEnglish,
 			[Description("Belgium (French)")]
-			Belgium(french),
+			BelgiumFrench,
 			[Description("Belize")]
 			Belize,
 			[Description("Belize (Spanish)")]
-			Belize(spanish),
+			BelizeSpanish,
 			[Description("Benin")]
 			Benin,
 			[Description("Bermuda")]
@@ -55,13 +55,13 @@ namespace AppleITunes {
 			[Description("Bolivia")]
 			Bolivia,
 			[Description("Bolivia (English)")]
-			Bolivia(english),
+			BoliviaEnglish,
 			[Description("Botswana")]
 			Botswana,
 			[Description("Brazil")]
 			Brazil,
 			[Description("Brazil (English)")]
-			Brazil(english),
+			BrazilEnglish,
 			[Description("Brunei Darussalam")]
 			BruneiDarussalam,
 			[Description("Burkina Faso")]
@@ -71,7 +71,7 @@ namespace AppleITunes {
 			[Description("Canada")]
 			Canada,
 			[Description("Canada (French)")]
-			Canada(french),
+			CanadaFrench,
 			[Description("Cape Verde")]
 			CapeVerde,
 			[Description("Cayman Islands")]
@@ -81,35 +81,35 @@ namespace AppleITunes {
 			[Description("Chile")]
 			Chile,
 			[Description("Chile (English)")]
-			Chile(english),
+			ChileEnglish,
 			[Description("Colombia")]
 			Colombia,
 			[Description("Colombia (English)")]
-			Colombia(english),
+			ColombiaEnglish,
 			[Description("Congo, Republic of the")]
 			CongoRepublicOfThe,
 			[Description("Costa Rica")]
 			CostaRica,
 			[Description("Costa Rica (English)")]
-			CostaRica(english),
+			CostaRicaEnglish,
 			[Description("Cyprus")]
 			Cyprus,
 			[Description("Denmark")]
 			Denmark,
 			[Description("Denmark (English)")]
-			Denmark(english),
+			DenmarkEnglish,
 			[Description("Germany")]
 			Germany,
 			[Description("Germany (English)")]
-			Germany(english),
+			GermanyEnglish,
 			[Description("Dominica")]
 			Dominica,
 			[Description("Dominica (English)")]
-			Dominica(english),
+			DominicaEnglish,
 			[Description("Ecuador")]
 			Ecuador,
 			[Description("Ecuador (English)")]
-			Ecuador(english),
+			EcuadorEnglish,
 			[Description("Estonia")]
 			Estonia,
 			[Description("Egypt")]
@@ -117,17 +117,17 @@ namespace AppleITunes {
 			[Description("El Salvador")]
 			ElSalvador,
 			[Description("El Salvador (English)")]
-			ElSalvador(english),
+			ElSalvadorEnglish,
 			[Description("Spain")]
 			Spain,
 			[Description("Spain (English)")]
-			Spain(english),
+			SpainEnglish,
 			[Description("Fiji")]
 			Fiji,
 			[Description("France")]
 			France,
 			[Description("France (English)")]
-			France(english),
+			FranceEnglish,
 			[Description("Gambia")]
 			Gambia,
 			[Description("Ghana")]
@@ -139,7 +139,7 @@ namespace AppleITunes {
 			[Description("Guatemala")]
 			Guatemala,
 			[Description("Guatemala (English)")]
-			Guatemala(english),
+			GuatemalaEnglish,
 			[Description("Guinea-Bissau")]
 			Guineabissau,
 			[Description("Guyana")]
@@ -147,11 +147,11 @@ namespace AppleITunes {
 			[Description("Honduras")]
 			Honduras,
 			[Description("Honduras (English)")]
-			Honduras(english),
+			HondurasEnglish,
 			[Description("Hong Kong")]
 			HongKong,
 			[Description("Hong Kong (English)")]
-			HongKong(english),
+			HongKongEnglish,
 			[Description("Croatia")]
 			Croatia,
 			[Description("Iceland")]
@@ -161,7 +161,7 @@ namespace AppleITunes {
 			[Description("Indonesia")]
 			Indonesia,
 			[Description("Indonesia (English)")]
-			Indonesia(english),
+			IndonesiaEnglish,
 			[Description("Ireland")]
 			Ireland,
 			[Description("Israel")]
@@ -169,7 +169,7 @@ namespace AppleITunes {
 			[Description("Italy")]
 			Italy,
 			[Description("Italy (English)")]
-			Italy(english),
+			ItalyEnglish,
 			[Description("Jamaica")]
 			Jamaica,
 			[Description("Jordan")]
@@ -195,13 +195,13 @@ namespace AppleITunes {
 			[Description("Luxembourg")]
 			Luxembourg,
 			[Description("Luxembourg (French)")]
-			Luxembourg(french),
+			LuxembourgFrench,
 			[Description("Luxembourg (English)")]
-			Luxembourg(english),
+			LuxembourgEnglish,
 			[Description("Macau")]
 			Macau,
 			[Description("Macau (English)")]
-			Macau(english),
+			MacauEnglish,
 			[Description("Macedonia")]
 			Macedonia,
 			[Description("Madagascar")]
@@ -213,7 +213,7 @@ namespace AppleITunes {
 			[Description("Malaysia")]
 			Malaysia,
 			[Description("Malaysia (English)")]
-			Malaysia(english),
+			MalaysiaEnglish,
 			[Description("Mali")]
 			Mali,
 			[Description("Malta")]
@@ -225,7 +225,7 @@ namespace AppleITunes {
 			[Description("Mexico")]
 			Mexico,
 			[Description("Mexico (English)")]
-			Mexico(english),
+			MexicoEnglish,
 			[Description("Micronesia, Federated States of")]
 			MicronesiaFederatedStatesOf,
 			[Description("Moldova")]
@@ -241,7 +241,7 @@ namespace AppleITunes {
 			[Description("Netherlands")]
 			Netherlands,
 			[Description("Netherlands (English)")]
-			Netherlands(english),
+			NetherlandsEnglish,
 			[Description("Nepal")]
 			Nepal,
 			[Description("New Zealand")]
@@ -249,7 +249,7 @@ namespace AppleITunes {
 			[Description("Nicaragua")]
 			Nicaragua,
 			[Description("Nicaragua (English)")]
-			Nicaragua(english),
+			NicaraguaEnglish,
 			[Description("Niger")]
 			Niger,
 			[Description("Nigeria")]
@@ -257,13 +257,13 @@ namespace AppleITunes {
 			[Description("Norway")]
 			Norway,
 			[Description("Norway (English)")]
-			Norway(english),
+			NorwayEnglish,
 			[Description("Oman")]
 			Oman,
 			[Description("Austria")]
 			Austria,
 			[Description("Austria (English)")]
-			Austria(english),
+			AustriaEnglish,
 			[Description("Pakistan")]
 			Pakistan,
 			[Description("Palau")]
@@ -271,13 +271,13 @@ namespace AppleITunes {
 			[Description("Panama")]
 			Panama,
 			[Description("Panama (English)")]
-			Panama(english),
+			PanamaEnglish,
 			[Description("Papua New Guinea")]
 			PapuaNewGuinea,
 			[Description("Paraguay")]
 			Paraguay,
 			[Description("Paraguay (English)")]
-			Paraguay(english),
+			ParaguayEnglish,
 			[Description("Peru")]
 			Peru,
 			[Description("Philippines")]
@@ -287,11 +287,11 @@ namespace AppleITunes {
 			[Description("Portugal")]
 			Portugal,
 			[Description("Portugal (English)")]
-			Portugal(english),
+			PortugalEnglish,
 			[Description("Dominican Republic")]
 			DominicanRepublic,
 			[Description("Dominican Republic (English)")]
-			DominicanRepublic(english),
+			DominicanRepublicEnglish,
 			[Description("Romania")]
 			Romania,
 			[Description("St. Kitts and Nevis")]
@@ -307,11 +307,11 @@ namespace AppleITunes {
 			[Description("Switzerland")]
 			Switzerland,
 			[Description("Switzerland (French)")]
-			Switzerland(french),
+			SwitzerlandFrench,
 			[Description("Switzerland (English)")]
-			Switzerland(english),
+			SwitzerlandEnglish,
 			[Description("Switzerland (Italian)")]
-			Switzerland(italian),
+			SwitzerlandItalian,
 			[Description("Senegal")]
 			Senegal,
 			[Description("Seychelles")]
@@ -321,7 +321,7 @@ namespace AppleITunes {
 			[Description("Singapore")]
 			Singapore,
 			[Description("Singapore (English)")]
-			Singapore(english),
+			SingaporeEnglish,
 			[Description("Slovakia")]
 			Slovakia,
 			[Description("Slovenia")]
@@ -335,15 +335,15 @@ namespace AppleITunes {
 			[Description("Finland")]
 			Finland,
 			[Description("Finland (English)")]
-			Finland(english),
+			FinlandEnglish,
 			[Description("Suriname")]
 			Suriname,
 			[Description("Suriname (English)")]
-			Suriname(english),
+			SurinameEnglish,
 			[Description("Sweden")]
 			Sweden,
 			[Description("Sweden (English)")]
-			Sweden(english),
+			SwedenEnglish,
 			[Description("Swaziland")]
 			Swaziland,
 			[Description("Tajikistan")]
@@ -353,7 +353,7 @@ namespace AppleITunes {
 			[Description("Thailand")]
 			Thailand,
 			[Description("Thailand (English)")]
-			Thailand(english),
+			ThailandEnglish,
 			[Description("Trinidad and Tobago")]
 			TrinidadAndTobago,
 			[Description("Tunisia")]
@@ -365,13 +365,13 @@ namespace AppleITunes {
 			[Description("Turkey")]
 			Turkey,
 			[Description("Turkey (English)")]
-			Turkey(english),
+			TurkeyEnglish,
 			[Description("United Kingdom")]
 			UnitedKingdom,
 			[Description("United States")]
 			UnitedStates,
 			[Description("United States (Spanish)")]
-			UnitedStates(spanish),
+			UnitedStatesSpanish,
 			[Description("Uganda")]
 			Uganda,
 			[Description("Qatar")]
@@ -381,17 +381,17 @@ namespace AppleITunes {
 			[Description("Uruguay")]
 			Uruguay,
 			[Description("Uruguay (English)")]
-			Uruguay(english),
+			UruguayEnglish,
 			[Description("Uzbekistan")]
 			Uzbekistan,
 			[Description("Venezuela")]
 			Venezuela,
 			[Description("Venezuela (English)")]
-			Venezuela(english),
+			VenezuelaEnglish,
 			[Description("Vietnam")]
 			Vietnam,
 			[Description("Vietnam (English)")]
-			Vietnam(english),
+			VietnamEnglish,
 			[Description("British Virgin Islands")]
 			BritishVirginIslands,
 			[Description("Yemen")]
@@ -403,447 +403,447 @@ namespace AppleITunes {
 			[Description("Russia")]
 			Russia,
 			[Description("Russia (English)")]
-			Russia(english),
+			RussiaEnglish,
 			[Description("Korea, Republic Of")]
 			KoreaRepublicOf,
 			[Description("Korea, Republic Of (English)")]
-			KoreaRepublicOf(english),
+			KoreaRepublicOfEnglish,
 			[Description("China")]
 			China,
 			[Description("China (English)")]
-			China(english),
+			ChinaEnglish,
 			[Description("Taiwan")]
 			Taiwan,
 			[Description("Taiwan (English)")]
-			Taiwan(english),
+			TaiwanEnglish,
 			[Description("Japan")]
 			Japan,
 			[Description("Japan (English)")]
-			Japan(english),
+			JapanEnglish,
 		}
+	}
 
-		internal static class CountryExtensions {
-			public static String GetCode(this Country country) {
-				switch (country) {
-					case Country.Albania:
-						return @"al";
-					case Country.CzechRepublic:
-						return @"cz";
-					case Country.Ukraine:
-						return @"ua";
-					case Country.Algeria:
-						return @"dz";
-					case Country.Angola:
-						return @"ao";
-					case Country.Anguilla:
-						return @"ai";
-					case Country.AntiguaAndBarbuda:
-						return @"ag";
-					case Country.Argentina:
-						return @"ar";
-					case Country.Argentina(english):
-						return @"ar_en";
-					case Country.Armenia:
-						return @"am";
-					case Country.Australia:
-						return @"au";
-					case Country.Azerbaijan:
-						return @"az";
-					case Country.Bahamas:
-						return @"bs";
-					case Country.Bahrain:
-						return @"bh";
-					case Country.Barbados:
-						return @"bb";
-					case Country.Belarus:
-						return @"by";
-					case Country.Belgium:
-						return @"be";
-					case Country.Belgium(english):
-						return @"be_en";
-					case Country.Belgium(french):
-						return @"be_fr";
-					case Country.Belize:
-						return @"bz";
-					case Country.Belize(spanish):
-						return @"bz_es";
-					case Country.Benin:
-						return @"bj";
-					case Country.Bermuda:
-						return @"bm";
-					case Country.Bhutan:
-						return @"bt";
-					case Country.Bolivia:
-						return @"bo";
-					case Country.Bolivia(english):
-						return @"bo_en";
-					case Country.Botswana:
-						return @"bw";
-					case Country.Brazil:
-						return @"br";
-					case Country.Brazil(english):
-						return @"br_en";
-					case Country.BruneiDarussalam:
-						return @"bn";
-					case Country.BurkinaFaso:
-						return @"bf";
-					case Country.Cambodia:
-						return @"kh";
-					case Country.Canada:
-						return @"ca";
-					case Country.Canada(french):
-						return @"ca_fr";
-					case Country.CapeVerde:
-						return @"cv";
-					case Country.CaymanIslands:
-						return @"ky";
-					case Country.Chad:
-						return @"td";
-					case Country.Chile:
-						return @"cl";
-					case Country.Chile(english):
-						return @"cl_en";
-					case Country.Colombia:
-						return @"co";
-					case Country.Colombia(english):
-						return @"co_en";
-					case Country.CongoRepublicOfThe:
-						return @"cg";
-					case Country.CostaRica:
-						return @"cr";
-					case Country.CostaRica(english):
-						return @"cr_en";
-					case Country.Cyprus:
-						return @"cy";
-					case Country.Denmark:
-						return @"dk";
-					case Country.Denmark(english):
-						return @"dk_en";
-					case Country.Germany:
-						return @"de";
-					case Country.Germany(english):
-						return @"de_en";
-					case Country.Dominica:
-						return @"dm";
-					case Country.Dominica(english):
-						return @"dm_en";
-					case Country.Ecuador:
-						return @"ec";
-					case Country.Ecuador(english):
-						return @"ec_en";
-					case Country.Estonia:
-						return @"ee";
-					case Country.Egypt:
-						return @"eg";
-					case Country.ElSalvador:
-						return @"sv";
-					case Country.ElSalvador(english):
-						return @"sv_en";
-					case Country.Spain:
-						return @"es";
-					case Country.Spain(english):
-						return @"es_en";
-					case Country.Fiji:
-						return @"fj";
-					case Country.France:
-						return @"fr";
-					case Country.France(english):
-						return @"fr_en";
-					case Country.Gambia:
-						return @"gm";
-					case Country.Ghana:
-						return @"gh";
-					case Country.Greece:
-						return @"gr";
-					case Country.Grenada:
-						return @"gd";
-					case Country.Guatemala:
-						return @"gt";
-					case Country.Guatemala(english):
-						return @"gt_en";
-					case Country.Guineabissau:
-						return @"gw";
-					case Country.Guyana:
-						return @"gy";
-					case Country.Honduras:
-						return @"hn";
-					case Country.Honduras(english):
-						return @"hn_en";
-					case Country.HongKong:
-						return @"hk";
-					case Country.HongKong(english):
-						return @"hk_en";
-					case Country.Croatia:
-						return @"hr";
-					case Country.Iceland:
-						return @"is";
-					case Country.India:
-						return @"in";
-					case Country.Indonesia:
-						return @"id";
-					case Country.Indonesia(english):
-						return @"id_en";
-					case Country.Ireland:
-						return @"ie";
-					case Country.Israel:
-						return @"il";
-					case Country.Italy:
-						return @"it";
-					case Country.Italy(english):
-						return @"it_en";
-					case Country.Jamaica:
-						return @"jm";
-					case Country.Jordan:
-						return @"jo";
-					case Country.Kazakhstan:
-						return @"kz";
-					case Country.Kenya:
-						return @"ke";
-					case Country.Kuwait:
-						return @"kw";
-					case Country.Kyrgyzstan:
-						return @"kg";
-					case Country.LaoPeoplesDemocraticRepublic:
-						return @"la";
-					case Country.Latvia:
-						return @"lv";
-					case Country.Lebanon:
-						return @"lb";
-					case Country.Liberia:
-						return @"lr";
-					case Country.Lithuania:
-						return @"lt";
-					case Country.Luxembourg:
-						return @"lu";
-					case Country.Luxembourg(french):
-						return @"lu_fr";
-					case Country.Luxembourg(english):
-						return @"lu_en";
-					case Country.Macau:
-						return @"mo";
-					case Country.Macau(english):
-						return @"mo_en";
-					case Country.Macedonia:
-						return @"mk";
-					case Country.Madagascar:
-						return @"mg";
-					case Country.Hungary:
-						return @"hu";
-					case Country.Malawi:
-						return @"mw";
-					case Country.Malaysia:
-						return @"my";
-					case Country.Malaysia(english):
-						return @"my_en";
-					case Country.Mali:
-						return @"ml";
-					case Country.Malta:
-						return @"mt";
-					case Country.Mauritania:
-						return @"mr";
-					case Country.Mauritius:
-						return @"mu";
-					case Country.Mexico:
-						return @"mx";
-					case Country.Mexico(english):
-						return @"mx_en";
-					case Country.MicronesiaFederatedStatesOf:
-						return @"fm";
-					case Country.Moldova:
-						return @"md";
-					case Country.Mongolia:
-						return @"mn";
-					case Country.Montserrat:
-						return @"ms";
-					case Country.Mozambique:
-						return @"mz";
-					case Country.Namibia:
-						return @"na";
-					case Country.Netherlands:
-						return @"nl";
-					case Country.Netherlands(english):
-						return @"nl_en";
-					case Country.Nepal:
-						return @"np";
-					case Country.NewZealand:
-						return @"nz";
-					case Country.Nicaragua:
-						return @"ni";
-					case Country.Nicaragua(english):
-						return @"ni_en";
-					case Country.Niger:
-						return @"ne";
-					case Country.Nigeria:
-						return @"ng";
-					case Country.Norway:
-						return @"no";
-					case Country.Norway(english):
-						return @"no_en";
-					case Country.Oman:
-						return @"om";
-					case Country.Austria:
-						return @"at";
-					case Country.Austria(english):
-						return @"at_en";
-					case Country.Pakistan:
-						return @"pk";
-					case Country.Palau:
-						return @"pw";
-					case Country.Panama:
-						return @"pa";
-					case Country.Panama(english):
-						return @"pa_en";
-					case Country.PapuaNewGuinea:
-						return @"pg";
-					case Country.Paraguay:
-						return @"py";
-					case Country.Paraguay(english):
-						return @"py_en";
-					case Country.Peru:
-						return @"pe";
-					case Country.Philippines:
-						return @"ph";
-					case Country.Poland:
-						return @"pl";
-					case Country.Portugal:
-						return @"pt";
-					case Country.Portugal(english):
-						return @"pt_en";
-					case Country.DominicanRepublic:
-						return @"do";
-					case Country.DominicanRepublic(english):
-						return @"do_en";
-					case Country.Romania:
-						return @"ro";
-					case Country.StKittsAndNevis:
-						return @"kn";
-					case Country.StLucia:
-						return @"lc";
-					case Country.StVincentAndTheGrenadines:
-						return @"vc";
-					case Country.SaudiArabia:
-						return @"sa";
-					case Country.SãoToméAndPríncipe:
-						return @"st";
-					case Country.Switzerland:
-						return @"ch";
-					case Country.Switzerland(french):
-						return @"ch_fr";
-					case Country.Switzerland(english):
-						return @"ch_en";
-					case Country.Switzerland(italian):
-						return @"ch_it";
-					case Country.Senegal:
-						return @"sn";
-					case Country.Seychelles:
-						return @"sc";
-					case Country.SierraLeone:
-						return @"sl";
-					case Country.Singapore:
-						return @"sg";
-					case Country.Singapore(english):
-						return @"sg_en";
-					case Country.Slovakia:
-						return @"sk";
-					case Country.Slovenia:
-						return @"si";
-					case Country.SolomonIslands:
-						return @"sb";
-					case Country.SouthAfrica:
-						return @"za";
-					case Country.SriLanka:
-						return @"lk";
-					case Country.Finland:
-						return @"fi";
-					case Country.Finland(english):
-						return @"fi_en";
-					case Country.Suriname:
-						return @"sr";
-					case Country.Suriname(english):
-						return @"sr_en";
-					case Country.Sweden:
-						return @"se";
-					case Country.Sweden(english):
-						return @"se_en";
-					case Country.Swaziland:
-						return @"sz";
-					case Country.Tajikistan:
-						return @"tj";
-					case Country.Tanzania:
-						return @"tz";
-					case Country.Thailand:
-						return @"th";
-					case Country.Thailand(english):
-						return @"th_en";
-					case Country.TrinidadAndTobago:
-						return @"tt";
-					case Country.Tunisia:
-						return @"tn";
-					case Country.Turkmenistan:
-						return @"tm";
-					case Country.TurksAndCaicos:
-						return @"tc";
-					case Country.Turkey:
-						return @"tr";
-					case Country.Turkey(english):
-						return @"tr_en";
-					case Country.UnitedKingdom:
-						return @"gb";
-					case Country.UnitedStates:
-						return @"us";
-					case Country.UnitedStates(spanish):
-						return @"us_es";
-					case Country.Uganda:
-						return @"ug";
-					case Country.Qatar:
-						return @"qa";
-					case Country.UnitedArabEmirates:
-						return @"ae";
-					case Country.Uruguay:
-						return @"uy";
-					case Country.Uruguay(english):
-						return @"uy_en";
-					case Country.Uzbekistan:
-						return @"uz";
-					case Country.Venezuela:
-						return @"ve";
-					case Country.Venezuela(english):
-						return @"ve_en";
-					case Country.Vietnam:
-						return @"vn";
-					case Country.Vietnam(english):
-						return @"vn_en";
-					case Country.BritishVirginIslands:
-						return @"vg";
-					case Country.Yemen:
-						return @"ye";
-					case Country.Zimbabwe:
-						return @"zw";
-					case Country.Bulgaria:
-						return @"bg";
-					case Country.Russia:
-						return @"ru";
-					case Country.Russia(english):
-						return @"ru_en";
-					case Country.KoreaRepublicOf:
-						return @"kr";
-					case Country.KoreaRepublicOf(english):
-						return @"kr_en";
-					case Country.China:
-						return @"cn";
-					case Country.China(english):
-						return @"cn_en";
-					case Country.Taiwan:
-						return @"tw";
-					case Country.Taiwan(english):
-						return @"tw_en";
-					case Country.Japan:
-						return @"jp";
-					case Country.Japan(english):
-						return @"jp_en";
-				}
-				throw new NotImplementedException();
+	internal static class CountryExtensions {
+		public static String GetCode(this Rss.Country country) {
+			switch (country) {
+				case Rss.Country.Albania:
+					return @"al";
+				case Rss.Country.CzechRepublic:
+					return @"cz";
+				case Rss.Country.Ukraine:
+					return @"ua";
+				case Rss.Country.Algeria:
+					return @"dz";
+				case Rss.Country.Angola:
+					return @"ao";
+				case Rss.Country.Anguilla:
+					return @"ai";
+				case Rss.Country.AntiguaAndBarbuda:
+					return @"ag";
+				case Rss.Country.Argentina:
+					return @"ar";
+				case Rss.Country.ArgentinaEnglish:
+					return @"ar_en";
+				case Rss.Country.Armenia:
+					return @"am";
+				case Rss.Country.Australia:
+					return @"au";
+				case Rss.Country.Azerbaijan:
+					return @"az";
+				case Rss.Country.Bahamas:
+					return @"bs";
+				case Rss.Country.Bahrain:
+					return @"bh";
+				case Rss.Country.Barbados:
+					return @"bb";
+				case Rss.Country.Belarus:
+					return @"by";
+				case Rss.Country.Belgium:
+					return @"be";
+				case Rss.Country.BelgiumEnglish:
+					return @"be_en";
+				case Rss.Country.BelgiumFrench:
+					return @"be_fr";
+				case Rss.Country.Belize:
+					return @"bz";
+				case Rss.Country.BelizeSpanish:
+					return @"bz_es";
+				case Rss.Country.Benin:
+					return @"bj";
+				case Rss.Country.Bermuda:
+					return @"bm";
+				case Rss.Country.Bhutan:
+					return @"bt";
+				case Rss.Country.Bolivia:
+					return @"bo";
+				case Rss.Country.BoliviaEnglish:
+					return @"bo_en";
+				case Rss.Country.Botswana:
+					return @"bw";
+				case Rss.Country.Brazil:
+					return @"br";
+				case Rss.Country.BrazilEnglish:
+					return @"br_en";
+				case Rss.Country.BruneiDarussalam:
+					return @"bn";
+				case Rss.Country.BurkinaFaso:
+					return @"bf";
+				case Rss.Country.Cambodia:
+					return @"kh";
+				case Rss.Country.Canada:
+					return @"ca";
+				case Rss.Country.CanadaFrench:
+					return @"ca_fr";
+				case Rss.Country.CapeVerde:
+					return @"cv";
+				case Rss.Country.CaymanIslands:
+					return @"ky";
+				case Rss.Country.Chad:
+					return @"td";
+				case Rss.Country.Chile:
+					return @"cl";
+				case Rss.Country.ChileEnglish:
+					return @"cl_en";
+				case Rss.Country.Colombia:
+					return @"co";
+				case Rss.Country.ColombiaEnglish:
+					return @"co_en";
+				case Rss.Country.CongoRepublicOfThe:
+					return @"cg";
+				case Rss.Country.CostaRica:
+					return @"cr";
+				case Rss.Country.CostaRicaEnglish:
+					return @"cr_en";
+				case Rss.Country.Cyprus:
+					return @"cy";
+				case Rss.Country.Denmark:
+					return @"dk";
+				case Rss.Country.DenmarkEnglish:
+					return @"dk_en";
+				case Rss.Country.Germany:
+					return @"de";
+				case Rss.Country.GermanyEnglish:
+					return @"de_en";
+				case Rss.Country.Dominica:
+					return @"dm";
+				case Rss.Country.DominicaEnglish:
+					return @"dm_en";
+				case Rss.Country.Ecuador:
+					return @"ec";
+				case Rss.Country.EcuadorEnglish:
+					return @"ec_en";
+				case Rss.Country.Estonia:
+					return @"ee";
+				case Rss.Country.Egypt:
+					return @"eg";
+				case Rss.Country.ElSalvador:
+					return @"sv";
+				case Rss.Country.ElSalvadorEnglish:
+					return @"sv_en";
+				case Rss.Country.Spain:
+					return @"es";
+				case Rss.Country.SpainEnglish:
+					return @"es_en";
+				case Rss.Country.Fiji:
+					return @"fj";
+				case Rss.Country.France:
+					return @"fr";
+				case Rss.Country.FranceEnglish:
+					return @"fr_en";
+				case Rss.Country.Gambia:
+					return @"gm";
+				case Rss.Country.Ghana:
+					return @"gh";
+				case Rss.Country.Greece:
+					return @"gr";
+				case Rss.Country.Grenada:
+					return @"gd";
+				case Rss.Country.Guatemala:
+					return @"gt";
+				case Rss.Country.GuatemalaEnglish:
+					return @"gt_en";
+				case Rss.Country.Guineabissau:
+					return @"gw";
+				case Rss.Country.Guyana:
+					return @"gy";
+				case Rss.Country.Honduras:
+					return @"hn";
+				case Rss.Country.HondurasEnglish:
+					return @"hn_en";
+				case Rss.Country.HongKong:
+					return @"hk";
+				case Rss.Country.HongKongEnglish:
+					return @"hk_en";
+				case Rss.Country.Croatia:
+					return @"hr";
+				case Rss.Country.Iceland:
+					return @"is";
+				case Rss.Country.India:
+					return @"in";
+				case Rss.Country.Indonesia:
+					return @"id";
+				case Rss.Country.IndonesiaEnglish:
+					return @"id_en";
+				case Rss.Country.Ireland:
+					return @"ie";
+				case Rss.Country.Israel:
+					return @"il";
+				case Rss.Country.Italy:
+					return @"it";
+				case Rss.Country.ItalyEnglish:
+					return @"it_en";
+				case Rss.Country.Jamaica:
+					return @"jm";
+				case Rss.Country.Jordan:
+					return @"jo";
+				case Rss.Country.Kazakhstan:
+					return @"kz";
+				case Rss.Country.Kenya:
+					return @"ke";
+				case Rss.Country.Kuwait:
+					return @"kw";
+				case Rss.Country.Kyrgyzstan:
+					return @"kg";
+				case Rss.Country.LaoPeoplesDemocraticRepublic:
+					return @"la";
+				case Rss.Country.Latvia:
+					return @"lv";
+				case Rss.Country.Lebanon:
+					return @"lb";
+				case Rss.Country.Liberia:
+					return @"lr";
+				case Rss.Country.Lithuania:
+					return @"lt";
+				case Rss.Country.Luxembourg:
+					return @"lu";
+				case Rss.Country.LuxembourgFrench:
+					return @"lu_fr";
+				case Rss.Country.LuxembourgEnglish:
+					return @"lu_en";
+				case Rss.Country.Macau:
+					return @"mo";
+				case Rss.Country.MacauEnglish:
+					return @"mo_en";
+				case Rss.Country.Macedonia:
+					return @"mk";
+				case Rss.Country.Madagascar:
+					return @"mg";
+				case Rss.Country.Hungary:
+					return @"hu";
+				case Rss.Country.Malawi:
+					return @"mw";
+				case Rss.Country.Malaysia:
+					return @"my";
+				case Rss.Country.MalaysiaEnglish:
+					return @"my_en";
+				case Rss.Country.Mali:
+					return @"ml";
+				case Rss.Country.Malta:
+					return @"mt";
+				case Rss.Country.Mauritania:
+					return @"mr";
+				case Rss.Country.Mauritius:
+					return @"mu";
+				case Rss.Country.Mexico:
+					return @"mx";
+				case Rss.Country.MexicoEnglish:
+					return @"mx_en";
+				case Rss.Country.MicronesiaFederatedStatesOf:
+					return @"fm";
+				case Rss.Country.Moldova:
+					return @"md";
+				case Rss.Country.Mongolia:
+					return @"mn";
+				case Rss.Country.Montserrat:
+					return @"ms";
+				case Rss.Country.Mozambique:
+					return @"mz";
+				case Rss.Country.Namibia:
+					return @"na";
+				case Rss.Country.Netherlands:
+					return @"nl";
+				case Rss.Country.NetherlandsEnglish:
+					return @"nl_en";
+				case Rss.Country.Nepal:
+					return @"np";
+				case Rss.Country.NewZealand:
+					return @"nz";
+				case Rss.Country.Nicaragua:
+					return @"ni";
+				case Rss.Country.NicaraguaEnglish:
+					return @"ni_en";
+				case Rss.Country.Niger:
+					return @"ne";
+				case Rss.Country.Nigeria:
+					return @"ng";
+				case Rss.Country.Norway:
+					return @"no";
+				case Rss.Country.NorwayEnglish:
+					return @"no_en";
+				case Rss.Country.Oman:
+					return @"om";
+				case Rss.Country.Austria:
+					return @"at";
+				case Rss.Country.AustriaEnglish:
+					return @"at_en";
+				case Rss.Country.Pakistan:
+					return @"pk";
+				case Rss.Country.Palau:
+					return @"pw";
+				case Rss.Country.Panama:
+					return @"pa";
+				case Rss.Country.PanamaEnglish:
+					return @"pa_en";
+				case Rss.Country.PapuaNewGuinea:
+					return @"pg";
+				case Rss.Country.Paraguay:
+					return @"py";
+				case Rss.Country.ParaguayEnglish:
+					return @"py_en";
+				case Rss.Country.Peru:
+					return @"pe";
+				case Rss.Country.Philippines:
+					return @"ph";
+				case Rss.Country.Poland:
+					return @"pl";
+				case Rss.Country.Portugal:
+					return @"pt";
+				case Rss.Country.PortugalEnglish:
+					return @"pt_en";
+				case Rss.Country.DominicanRepublic:
+					return @"do";
+				case Rss.Country.DominicanRepublicEnglish:
+					return @"do_en";
+				case Rss.Country.Romania:
+					return @"ro";
+				case Rss.Country.StKittsAndNevis:
+					return @"kn";
+				case Rss.Country.StLucia:
+					return @"lc";
+				case Rss.Country.StVincentAndTheGrenadines:
+					return @"vc";
+				case Rss.Country.SaudiArabia:
+					return @"sa";
+				case Rss.Country.SãoToméAndPríncipe:
+					return @"st";
+				case Rss.Country.Switzerland:
+					return @"ch";
+				case Rss.Country.SwitzerlandFrench:
+					return @"ch_fr";
+				case Rss.Country.SwitzerlandEnglish:
+					return @"ch_en";
+				case Rss.Country.SwitzerlandItalian:
+					return @"ch_it";
+				case Rss.Country.Senegal:
+					return @"sn";
+				case Rss.Country.Seychelles:
+					return @"sc";
+				case Rss.Country.SierraLeone:
+					return @"sl";
+				case Rss.Country.Singapore:
+					return @"sg";
+				case Rss.Country.SingaporeEnglish:
+					return @"sg_en";
+				case Rss.Country.Slovakia:
+					return @"sk";
+				case Rss.Country.Slovenia:
+					return @"si";
+				case Rss.Country.SolomonIslands:
+					return @"sb";
+				case Rss.Country.SouthAfrica:
+					return @"za";
+				case Rss.Country.SriLanka:
+					return @"lk";
+				case Rss.Country.Finland:
+					return @"fi";
+				case Rss.Country.FinlandEnglish:
+					return @"fi_en";
+				case Rss.Country.Suriname:
+					return @"sr";
+				case Rss.Country.SurinameEnglish:
+					return @"sr_en";
+				case Rss.Country.Sweden:
+					return @"se";
+				case Rss.Country.SwedenEnglish:
+					return @"se_en";
+				case Rss.Country.Swaziland:
+					return @"sz";
+				case Rss.Country.Tajikistan:
+					return @"tj";
+				case Rss.Country.Tanzania:
+					return @"tz";
+				case Rss.Country.Thailand:
+					return @"th";
+				case Rss.Country.ThailandEnglish:
+					return @"th_en";
+				case Rss.Country.TrinidadAndTobago:
+					return @"tt";
+				case Rss.Country.Tunisia:
+					return @"tn";
+				case Rss.Country.Turkmenistan:
+					return @"tm";
+				case Rss.Country.TurksAndCaicos:
+					return @"tc";
+				case Rss.Country.Turkey:
+					return @"tr";
+				case Rss.Country.TurkeyEnglish:
+					return @"tr_en";
+				case Rss.Country.UnitedKingdom:
+					return @"gb";
+				case Rss.Country.UnitedStates:
+					return @"us";
+				case Rss.Country.UnitedStatesSpanish:
+					return @"us_es";
+				case Rss.Country.Uganda:
+					return @"ug";
+				case Rss.Country.Qatar:
+					return @"qa";
+				case Rss.Country.UnitedArabEmirates:
+					return @"ae";
+				case Rss.Country.Uruguay:
+					return @"uy";
+				case Rss.Country.UruguayEnglish:
+					return @"uy_en";
+				case Rss.Country.Uzbekistan:
+					return @"uz";
+				case Rss.Country.Venezuela:
+					return @"ve";
+				case Rss.Country.VenezuelaEnglish:
+					return @"ve_en";
+				case Rss.Country.Vietnam:
+					return @"vn";
+				case Rss.Country.VietnamEnglish:
+					return @"vn_en";
+				case Rss.Country.BritishVirginIslands:
+					return @"vg";
+				case Rss.Country.Yemen:
+					return @"ye";
+				case Rss.Country.Zimbabwe:
+					return @"zw";
+				case Rss.Country.Bulgaria:
+					return @"bg";
+				case Rss.Country.Russia:
+					return @"ru";
+				case Rss.Country.RussiaEnglish:
+					return @"ru_en";
+				case Rss.Country.KoreaRepublicOf:
+					return @"kr";
+				case Rss.Country.KoreaRepublicOfEnglish:
+					return @"kr_en";
+				case Rss.Country.China:
+					return @"cn";
+				case Rss.Country.ChinaEnglish:
+					return @"cn_en";
+				case Rss.Country.Taiwan:
+					return @"tw";
+				case Rss.Country.TaiwanEnglish:
+					return @"tw_en";
+				case Rss.Country.Japan:
+					return @"jp";
+				case Rss.Country.JapanEnglish:
+					return @"jp_en";
 			}
+			throw new NotImplementedException();
 		}
 	}
 }
