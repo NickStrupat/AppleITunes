@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace AppleITunes
 {
-    public class Search
+    public partial class Search
     {
-	    public struct Country {}
-
 	    public enum Media {
 		    Movie, Podcast, Music, MusicVideo, Audiobook, ShortFilm, TvShow, Software, Ebook, All
 	    }
